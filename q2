@@ -1,1 +1,22 @@
-
+#include <stdio.h>
+int main(){
+    const int row=10;
+    int i,position=0;
+    char z_char,arr[row],enter;
+    for(i=0; i<row; i++){
+        printf("array element #%d: ",i);
+        scanf("%c",&arr[i]);
+        scanf("%c", &enter); //to safely read other character than enter
+    }
+    z_char=arr[0];
+    for (int i=0; i<row; i++) {
+        if (z_char < arr[i]){
+            z_char = arr[i];
+            position=i;
+        }
+        else
+            continue;
+    }
+    printf("z character is %c at position %d in array",z_char,position);
+    return 0;
+}
