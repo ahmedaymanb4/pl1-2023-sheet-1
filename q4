@@ -1,1 +1,15 @@
-
+#include <stdio.h>
+float o_sum=0,e_sum=0;
+int i,arr[10];
+void main(void){
+    for(i=0; i<=9; i++){
+        printf("array element no.%d: ",i+1);
+        scanf("%d",&arr[i]);
+        if(arr[i]%2 == 0)
+            {e_sum+=arr[i];}
+        else if(arr[i]%2 != 0)
+            {o_sum+=arr[i];}
+    }
+    printf("\nsum of even numbers: %.2f",e_sum);
+    printf("\nsum of odd numbers: %.2f",o_sum);
+}
